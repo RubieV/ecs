@@ -81,6 +81,15 @@
         the query field exists with an empty string. The `exists`
         query can be used to differentiate between the two cases.
 
+    - name: parameters
+      level: extended
+      type: object
+      index: False
+      short: Input parameters of the request.
+      description: >
+        The parametrs field describes the input parameters of the request,
+        such as {"q":"elasticsearch"}.
+
     - name: fragment
       level: extended
       type: keyword

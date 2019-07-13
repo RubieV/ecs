@@ -62,6 +62,69 @@
             }
           }
         },
+        "attack": {
+          "properties": {
+            "applicable_systems": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "certainty": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "class": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "configuration": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "description": {
+              "norms": false,
+              "type": "text"
+            },
+            "id": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "killchain": {
+              "properties": {
+                "category": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "level": {
+                  "type": "long"
+                },
+                "subcategory": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "name": {
+              "norms": false,
+              "type": "text"
+            },
+            "path": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "payload": {
+              "norms": false,
+              "type": "text"
+            },
+            "policy": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "stage": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            }
+          }
+        },
         "client": {
           "properties": {
             "address": {
@@ -861,6 +924,10 @@
             "original": {
               "ignore_above": 1024,
               "type": "keyword"
+            },
+            "parameters": {
+              "index": false,
+              "type": "object"
             },
             "password": {
               "ignore_above": 1024,

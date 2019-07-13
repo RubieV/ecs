@@ -66,7 +66,7 @@ generator:
 # Generate Go code from the schema.
 .PHONY: gocodegen
 gocodegen:
-	find code/go/ecs -name '*.go' -not -name 'doc.go' | xargs rm
+	find code/go/ecs -name '*.go' -not -name 'doc.go' -print0 | xargs -0 rm -- || true
 	cd scripts \
 	  && $(FORCE_GO_MODULES) go run cmd/gocodegen/gocodegen.go \
 	        -version=$(VERSION) \
@@ -122,7 +122,7 @@ test:
 .PHONY: ve
 ve: build/ve/bin/activate
 build/ve/bin/activate: scripts/requirements.txt
-	@test -d build/ve || virtualenv build/ve
+	@test -d build/ve || virtualenv --python=/usr/bin/python2.7 build/ve
 	@build/ve/bin/pip install -Ur scripts/requirements.txt
 	@touch build/ve/bin/activate
 

@@ -200,6 +200,177 @@ Note also that the `as` fields are not expected to be used directly at the top l
 
 
 
+[[ecs-attack]]
+=== Attack Fields
+
+These fields can represent attacks on applications.
+
+For example, ModSecurity events, or F5 ASM violations.
+
+==== Attack Field Details
+
+[options="header"]
+|=====
+| Field  | Description | Level
+
+// ===============================================================
+
+| attack.applicable_systems
+| Code prefixed by the source system, for example "CRS-942100"
+
+type: keyword
+
+example: `["language-java"]`
+
+| extended
+
+// ===============================================================
+
+| attack.certainty
+| The type of certainty that there is an actual positive
+
+type: keyword
+
+example: `["BEHAVIOR", "HEURISTIC", "GENERIC", "EXACT"]`
+
+| extended
+
+// ===============================================================
+
+| attack.class
+| Code prefixed by the source system, for example "CRS-942100"
+
+type: keyword
+
+example: `["POLICY_VIOLATION", "INFORMATIONAL", "HEURISTIC"]`
+
+| extended
+
+// ===============================================================
+
+| attack.configuration
+| The file or policy location that the rule belongs to
+
+type: keyword
+
+example: `/root/owasp-v3/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf:733`
+
+| extended
+
+// ===============================================================
+
+| attack.description
+| Description of the rule data.
+
+type: text
+
+example: `Matched "Operator `Rx' with parameter `^[d.:]+$' against variable `REQUEST_HEADERS:Host' (Value: `54.183.57.254' )`
+
+| extended
+
+// ===============================================================
+
+| attack.id
+| Rule name prefixed by the source system
+
+type: keyword
+
+example: `CRS-942100`
+
+| extended
+
+// ===============================================================
+
+| attack.killchain.category
+| Code prefixed by the source system, for example "CRS-942100"
+
+type: keyword
+
+example: `["RECONNAISSANCE", "WEAPONIZE", "DELIVERY", "EXPLOITATION", "INSTALLATION", "COMMAND AND CONTROL", "COLLECTION", "EXFILTRATION", "ACTIONS"]`
+
+| extended
+
+// ===============================================================
+
+| attack.killchain.level
+| The numeric categroy and subcategory level. The first digit represent the category (1 to 9), the second digit represents a subcategory level (default 0).
+
+type: long
+
+example: `10`
+
+| extended
+
+// ===============================================================
+
+| attack.killchain.subcategory
+| Code prefixed by the source system, for example "CRS-942100"
+
+type: keyword
+
+example: `["FILE ENUMERATION", "SQL DATA EXFILTRATION"]`
+
+| extended
+
+// ===============================================================
+
+| attack.name
+| Description of the rule data.
+
+type: text
+
+example: `Host header is a numeric IP address`
+
+| extended
+
+// ===============================================================
+
+| attack.path
+| Unique path to the system and the location in the system where the payload is inserted to
+
+type: keyword
+
+example: `damn-vulnerable-application > /vulnerability/sql.php > id`
+
+| extended
+
+// ===============================================================
+
+| attack.payload
+| Description of the rule data.
+
+type: text
+
+example: `54.183.57.254`
+
+| extended
+
+// ===============================================================
+
+| attack.policy
+| Code prefixed by the source system, for example "CRS-942100"
+
+type: keyword
+
+example: `["OWASP-A1", "PCI-6.5.10"]`
+
+| extended
+
+// ===============================================================
+
+| attack.stage
+| Code prefixed by the source system, for example "CRS-942100"
+
+type: keyword
+
+example: `["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]`
+
+| extended
+
+// ===============================================================
+
+|=====
+
 [[ecs-client]]
 === Client Fields
 
@@ -2961,6 +3132,17 @@ This field is meant to represent the URL as it was observed, complete or not.
 type: keyword
 
 example: `https://www.elastic.co:443/search?q=elasticsearch#top or /search?q=elasticsearch`
+
+| extended
+
+// ===============================================================
+
+| url.parameters
+| The parametrs field describes the input parameters of the request, such as {"q":"elasticsearch"}.
+
+type: object
+
+
 
 | extended
 

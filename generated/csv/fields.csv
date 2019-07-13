@@ -10,6 +10,20 @@ agent.type,keyword,core,filebeat,1.1.0-dev
 agent.version,keyword,core,6.0.0-rc2,1.1.0-dev
 as.number,long,extended,15169,1.1.0-dev
 as.organization.name,keyword,extended,Google LLC,1.1.0-dev
+attack.applicable_systems,keyword,extended,"[""language-java""]",1.1.0-dev
+attack.certainty,keyword,extended,"[""BEHAVIOR"", ""HEURISTIC"", ""GENERIC"", ""EXACT""]",1.1.0-dev
+attack.class,keyword,extended,"[""POLICY_VIOLATION"", ""INFORMATIONAL"", ""HEURISTIC""]",1.1.0-dev
+attack.configuration,keyword,extended,/root/owasp-v3/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf:733,1.1.0-dev
+attack.description,text,extended,"Matched ""Operator `Rx' with parameter `^[d.:]+$' against variable `REQUEST_HEADERS:Host' (Value: `54.183.57.254' )",1.1.0-dev
+attack.id,keyword,extended,CRS-942100,1.1.0-dev
+attack.killchain.category,keyword,extended,"[""RECONNAISSANCE"", ""WEAPONIZE"", ""DELIVERY"", ""EXPLOITATION"", ""INSTALLATION"", ""COMMAND AND CONTROL"", ""COLLECTION"", ""EXFILTRATION"", ""ACTIONS""]",1.1.0-dev
+attack.killchain.level,long,extended,10,1.1.0-dev
+attack.killchain.subcategory,keyword,extended,"[""FILE ENUMERATION"", ""SQL DATA EXFILTRATION""]",1.1.0-dev
+attack.name,text,extended,Host header is a numeric IP address,1.1.0-dev
+attack.path,keyword,extended,damn-vulnerable-application > /vulnerability/sql.php > id,1.1.0-dev
+attack.payload,text,extended,54.183.57.254,1.1.0-dev
+attack.policy,keyword,extended,"[""OWASP-A1"", ""PCI-6.5.10""]",1.1.0-dev
+attack.stage,keyword,extended,"[""DISABLED"", ""TEST"", ""LEARN"", ""DETECT"", ""BLOCK""]",1.1.0-dev
 client.address,keyword,extended,,1.1.0-dev
 client.as.number,long,extended,15169,1.1.0-dev
 client.as.organization.name,keyword,extended,Google LLC,1.1.0-dev
@@ -300,6 +314,7 @@ url.domain,keyword,extended,www.elastic.co,1.1.0-dev
 url.fragment,keyword,extended,,1.1.0-dev
 url.full,keyword,extended,https://www.elastic.co:443/search?q=elasticsearch#top,1.1.0-dev
 url.original,keyword,extended,https://www.elastic.co:443/search?q=elasticsearch#top or /search?q=elasticsearch,1.1.0-dev
+url.parameters,object,extended,,1.1.0-dev
 url.password,keyword,extended,,1.1.0-dev
 url.path,keyword,extended,,1.1.0-dev
 url.port,long,extended,443,1.1.0-dev

@@ -58,6 +58,10 @@ type Url struct {
 	// differentiate between the two cases.
 	Query string `ecs:"query"`
 
+	// The parametrs field describes the input parameters of the request, such
+	// as {"q":"elasticsearch"}.
+	Parameters map[string]interface{} `ecs:"parameters"`
+
 	// Portion of the url after the `#`, such as "top".
 	// The `#` is not part of the fragment.
 	Fragment string `ecs:"fragment"`

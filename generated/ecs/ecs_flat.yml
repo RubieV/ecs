@@ -101,6 +101,150 @@ as.organization.name:
   order: 1
   short: Organization name.
   type: keyword
+attack.applicable_systems:
+  description: Code prefixed by the source system, for example "CRS-942100"
+  example: '["language-java"]'
+  flat_name: attack.applicable_systems
+  ignore_above: 1024
+  level: extended
+  name: applicable_systems
+  order: 7
+  short: Class of the violatoin, such as "POLICY_VIOLATION".
+  type: keyword
+attack.certainty:
+  description: The type of certainty that there is an actual positive
+  example: '["BEHAVIOR", "HEURISTIC", "GENERIC", "EXACT"]'
+  flat_name: attack.certainty
+  ignore_above: 1024
+  level: extended
+  name: certainty
+  order: 12
+  short: Certainty of the match
+  type: keyword
+attack.class:
+  description: Code prefixed by the source system, for example "CRS-942100"
+  example: '["POLICY_VIOLATION", "INFORMATIONAL", "HEURISTIC"]'
+  flat_name: attack.class
+  ignore_above: 1024
+  level: extended
+  name: class
+  order: 5
+  short: Class of the violatoin, such as "POLICY_VIOLATION".
+  type: keyword
+attack.configuration:
+  description: The file or policy location that the rule belongs to
+  example: /root/owasp-v3/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf:733
+  flat_name: attack.configuration
+  ignore_above: 1024
+  level: extended
+  name: configuration
+  order: 14
+  short: File or congiruation path
+  type: keyword
+attack.description:
+  description: Description of the rule data.
+  example: 'Matched "Operator `Rx'' with parameter `^[d.:]+$'' against variable `REQUEST_HEADERS:Host''
+    (Value: `54.183.57.254'' )'
+  flat_name: attack.description
+  level: extended
+  name: description
+  norms: false
+  order: 4
+  short: Description of the rule data.
+  type: text
+attack.id:
+  description: Rule name prefixed by the source system
+  example: CRS-942100
+  flat_name: attack.id
+  ignore_above: 1024
+  level: extended
+  name: id
+  order: 0
+  short: Rule name prefixed by the source system
+  type: keyword
+attack.killchain.category:
+  description: Code prefixed by the source system, for example "CRS-942100"
+  example: '["RECONNAISSANCE", "WEAPONIZE", "DELIVERY", "EXPLOITATION", "INSTALLATION",
+    "COMMAND AND CONTROL", "COLLECTION", "EXFILTRATION", "ACTIONS"]'
+  flat_name: attack.killchain.category
+  ignore_above: 1024
+  level: extended
+  name: killchain.category
+  order: 9
+  short: Stage of the attack.
+  type: keyword
+attack.killchain.level:
+  description: The numeric categroy and subcategory level. The first digit represent
+    the category (1 to 9), the second digit represents a subcategory level (default
+    0).
+  example: '10'
+  flat_name: attack.killchain.level
+  level: extended
+  name: killchain.level
+  order: 11
+  short: Stage of the attack.
+  type: long
+attack.killchain.subcategory:
+  description: Code prefixed by the source system, for example "CRS-942100"
+  example: '["FILE ENUMERATION", "SQL DATA EXFILTRATION"]'
+  flat_name: attack.killchain.subcategory
+  ignore_above: 1024
+  level: extended
+  name: killchain.subcategory
+  order: 10
+  short: Stage of the attack.
+  type: keyword
+attack.name:
+  description: Description of the rule data.
+  example: Host header is a numeric IP address
+  flat_name: attack.name
+  level: extended
+  name: name
+  norms: false
+  order: 1
+  short: Description of the rule data.
+  type: text
+attack.path:
+  description: Unique path to the system and the location in the system where the
+    payload is inserted to
+  example: damn-vulnerable-application > /vulnerability/sql.php > id
+  flat_name: attack.path
+  ignore_above: 1024
+  level: extended
+  name: path
+  order: 6
+  short: Location of the payload and the system
+  type: keyword
+attack.payload:
+  description: Description of the rule data.
+  example: 54.183.57.254
+  flat_name: attack.payload
+  level: extended
+  name: payload
+  norms: false
+  order: 3
+  short: Description of the rule data.
+  type: text
+attack.policy:
+  description: Code prefixed by the source system, for example "CRS-942100"
+  example: '["OWASP-A1", "PCI-6.5.10"]'
+  flat_name: attack.policy
+  ignore_above: 1024
+  level: extended
+  name: policy
+  order: 8
+  short: Class of the violatoin, such as "POLICY_VIOLATION".
+  type: keyword
+attack.stage:
+  description: Code prefixed by the source system, for example "CRS-942100"
+  example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
+  flat_name: attack.stage
+  ignore_above: 1024
+  level: extended
+  name: stage
+  order: 13
+  short: Stage of the rule lifcycle.
+  type: keyword
 client.address:
   description: 'Some event client addresses are defined ambiguously. The event will
     sometimes list an IP, a domain or a unix socket.  You should always store the
@@ -3323,7 +3467,7 @@ url.fragment:
   ignore_above: 1024
   level: extended
   name: fragment
-  order: 7
+  order: 8
   short: Portion of the url after the `#`.
   type: keyword
 url.full:
@@ -3352,13 +3496,25 @@ url.original:
   order: 0
   short: Unmodified original url as seen in the event source.
   type: keyword
+url.parameters:
+  description: The parametrs field describes the input parameters of the request,
+    such as {"q":"elasticsearch"}.
+  doc_values: false
+  flat_name: url.parameters
+  index: false
+  level: extended
+  name: parameters
+  object_type: keyword
+  order: 7
+  short: Input parameters of the request.
+  type: object
 url.password:
   description: Password of the request.
   flat_name: url.password
   ignore_above: 1024
   level: extended
   name: password
-  order: 9
+  order: 10
   short: Password of the request.
   type: keyword
 url.path:
@@ -3413,7 +3569,7 @@ url.username:
   ignore_above: 1024
   level: extended
   name: username
-  order: 8
+  order: 9
   short: Username of the request.
   type: keyword
 user.domain:
