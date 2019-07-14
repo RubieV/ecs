@@ -37,8 +37,8 @@ type Attack struct {
 	// Description of the rule data.
 	Description string `ecs:"description"`
 
-	// Code prefixed by the source system, for example "CRS-942100"
-	Class string `ecs:"class"`
+	// The attack category
+	Category string `ecs:"category"`
 
 	// Unique path to the system and the location in the system where the
 	// payload is inserted to

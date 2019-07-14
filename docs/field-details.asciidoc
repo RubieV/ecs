@@ -226,23 +226,23 @@ example: `["language-java"]`
 
 // ===============================================================
 
+| attack.category
+| The attack category
+
+type: keyword
+
+example: `["PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT", "INFORMATIONAL", "AUTOMATION_CRAWLER", "BEHAVIOR_INSUFFICIENT_AUTHENTICATION"]`
+
+| extended
+
+// ===============================================================
+
 | attack.certainty
 | The type of certainty that there is an actual positive
 
 type: keyword
 
 example: `["BEHAVIOR", "HEURISTIC", "GENERIC", "EXACT"]`
-
-| extended
-
-// ===============================================================
-
-| attack.class
-| Code prefixed by the source system, for example "CRS-942100"
-
-type: keyword
-
-example: `["POLICY_VIOLATION", "INFORMATIONAL", "HEURISTIC"]`
 
 | extended
 

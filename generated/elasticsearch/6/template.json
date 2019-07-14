@@ -68,11 +68,11 @@
               "ignore_above": 1024, 
               "type": "keyword"
             }, 
-            "certainty": {
+            "category": {
               "ignore_above": 1024, 
               "type": "keyword"
             }, 
-            "class": {
+            "certainty": {
               "ignore_above": 1024, 
               "type": "keyword"
             }, 

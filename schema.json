@@ -100,6 +100,16 @@
         "required": false, 
         "type": "keyword"
       }, 
+      "attack.category": {
+        "description": "The attack category", 
+        "example": "[\"PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT\", \"INFORMATIONAL\", \"AUTOMATION_CRAWLER\", \"BEHAVIOR_INSUFFICIENT_AUTHENTICATION\"]", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "attack.category", 
+        "required": false, 
+        "type": "keyword"
+      }, 
       "attack.certainty": {
         "description": "The type of certainty that there is an actual positive", 
         "example": "[\"BEHAVIOR\", \"HEURISTIC\", \"GENERIC\", \"EXACT\"]", 
@@ -107,16 +117,6 @@
         "group": 2, 
         "level": "extended", 
         "name": "attack.certainty", 
-        "required": false, 
-        "type": "keyword"
-      }, 
-      "attack.class": {
-        "description": "Code prefixed by the source system, for example \"CRS-942100\"", 
-        "example": "[\"POLICY_VIOLATION\", \"INFORMATIONAL\", \"HEURISTIC\"]", 
-        "footnote": "", 
-        "group": 2, 
-        "level": "extended", 
-        "name": "attack.class", 
         "required": false, 
         "type": "keyword"
       }, 

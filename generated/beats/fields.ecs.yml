@@ -145,18 +145,19 @@
       ignore_above: 1024
       description: Code prefixed by the source system, for example "CRS-942100"
       example: '["language-java"]'
+    - name: category
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: The attack category
+      example: '["PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT", "INFORMATIONAL", "AUTOMATION_CRAWLER",
+        "BEHAVIOR_INSUFFICIENT_AUTHENTICATION"]'
     - name: certainty
       level: extended
       type: keyword
       ignore_above: 1024
       description: The type of certainty that there is an actual positive
       example: '["BEHAVIOR", "HEURISTIC", "GENERIC", "EXACT"]'
-    - name: class
-      level: extended
-      type: keyword
-      ignore_above: 1024
-      description: Code prefixed by the source system, for example "CRS-942100"
-      example: '["POLICY_VIOLATION", "INFORMATIONAL", "HEURISTIC"]'
     - name: configuration
       level: extended
       type: keyword

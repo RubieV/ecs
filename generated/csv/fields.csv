@@ -11,8 +11,8 @@ agent.version,keyword,core,6.0.0-rc2,1.1.0-dev
 as.number,long,extended,15169,1.1.0-dev
 as.organization.name,keyword,extended,Google LLC,1.1.0-dev
 attack.applicable_systems,keyword,extended,"[""language-java""]",1.1.0-dev
+attack.category,keyword,extended,"[""PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT"", ""INFORMATIONAL"", ""AUTOMATION_CRAWLER"", ""BEHAVIOR_INSUFFICIENT_AUTHENTICATION""]",1.1.0-dev
 attack.certainty,keyword,extended,"[""BEHAVIOR"", ""HEURISTIC"", ""GENERIC"", ""EXACT""]",1.1.0-dev
-attack.class,keyword,extended,"[""POLICY_VIOLATION"", ""INFORMATIONAL"", ""HEURISTIC""]",1.1.0-dev
 attack.configuration,keyword,extended,/root/owasp-v3/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf:733,1.1.0-dev
 attack.description,text,extended,"Matched ""Operator `Rx' with parameter `^[d.:]+$' against variable `REQUEST_HEADERS:Host' (Value: `54.183.57.254' )",1.1.0-dev
 attack.id,keyword,extended,CRS-942100,1.1.0-dev

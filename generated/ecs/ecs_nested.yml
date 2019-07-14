@@ -136,6 +136,17 @@ attack:
       order: 7
       short: Class of the violatoin, such as "POLICY_VIOLATION".
       type: keyword
+    category:
+      description: The attack category
+      example: '["PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT", "INFORMATIONAL", "AUTOMATION_CRAWLER",
+        "BEHAVIOR_INSUFFICIENT_AUTHENTICATION"]'
+      flat_name: attack.category
+      ignore_above: 1024
+      level: extended
+      name: category
+      order: 5
+      short: Category of the violatoin
+      type: keyword
     certainty:
       description: The type of certainty that there is an actual positive
       example: '["BEHAVIOR", "HEURISTIC", "GENERIC", "EXACT"]'
@@ -145,16 +156,6 @@ attack:
       name: certainty
       order: 12
       short: Certainty of the match
-      type: keyword
-    class:
-      description: Code prefixed by the source system, for example "CRS-942100"
-      example: '["POLICY_VIOLATION", "INFORMATIONAL", "HEURISTIC"]'
-      flat_name: attack.class
-      ignore_above: 1024
-      level: extended
-      name: class
-      order: 5
-      short: Class of the violatoin, such as "POLICY_VIOLATION".
       type: keyword
     configuration:
       description: The file or policy location that the rule belongs to
