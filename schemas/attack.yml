@@ -50,14 +50,14 @@
       example: >
         Matched "Operator `Rx' with parameter `^[d.:]+$' against variable `REQUEST_HEADERS:Host' (Value: `54.183.57.254' )
 
-    - name: class
+    - name: category
       level: extended
       type: keyword
-      short: Class of the violatoin, such as "POLICY_VIOLATION".
+      short: Category of the violatoin
       description: >
-        Code prefixed by the source system, for example "CRS-942100"
+        The attack category
       example: >
-        ["POLICY_VIOLATION", "INFORMATIONAL", "HEURISTIC"]
+        ["PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT", "INFORMATIONAL", "AUTOMATION_CRAWLER", "BEHAVIOR_INSUFFICIENT_AUTHENTICATION"]
 
     - name: path
       level: extended
