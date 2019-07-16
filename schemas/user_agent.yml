@@ -36,3 +36,10 @@
       example: iPhone
       description: >
         Name of the device.
+
+    - name: device.category
+      level: extended
+      type: keyword
+      example: ["SCANNER", "BROWSER", "TOOL", "SCRIPT", "CRAWLER"]
+      description: >
+        Category of the user agent
