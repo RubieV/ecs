@@ -4128,18 +4128,17 @@ user_agent:
 
     They often show up in web service logs coming from the parsed user agent string.'
   fields:
-    device.category:
+    category:
       description: Category of the user agent
       example:
       - SCANNER
       - BROWSER
-      - TOOL
-      - SCRIPT
+      - SCRIPTING
       - CRAWLER
-      flat_name: user_agent.device.category
+      flat_name: user_agent.category
       ignore_above: 1024
       level: extended
-      name: device.category
+      name: category
       order: 4
       short: Category of the user agent
       type: keyword

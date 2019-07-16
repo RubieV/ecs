@@ -36,5 +36,5 @@ type UserAgent struct {
 	DeviceName string `ecs:"device.name"`
 
 	// Category of the user agent
-	DeviceCategory string `ecs:"device.category"`
+	Category string `ecs:"category"`
 }

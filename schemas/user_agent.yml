@@ -37,9 +37,9 @@
       description: >
         Name of the device.
 
-    - name: device.category
+    - name: category
       level: extended
       type: keyword
-      example: ["SCANNER", "BROWSER", "TOOL", "SCRIPT", "CRAWLER"]
+      example: ["SCANNER", "BROWSER", "SCRIPTING", "CRAWLER"]
       description: >
         Category of the user agent

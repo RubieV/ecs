@@ -3349,12 +3349,12 @@ They often show up in web service logs coming from the parsed user agent string.
 
 // ===============================================================
 
-| user_agent.device.category
+| user_agent.category
 | Category of the user agent
 
 type: keyword
 
-example: `['SCANNER', 'BROWSER', 'TOOL', 'SCRIPT', 'CRAWLER']`
+example: `['SCANNER', 'BROWSER', 'SCRIPTING', 'CRAWLER']`
 
 | extended
 

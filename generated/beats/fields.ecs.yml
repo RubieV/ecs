@@ -2518,7 +2518,7 @@
       They often show up in web service logs coming from the parsed user agent string.'
     type: group
     fields:
-    - name: device.category
+    - name: category
       level: extended
       type: keyword
       ignore_above: 1024
@@ -2526,8 +2526,7 @@
       example:
       - SCANNER
       - BROWSER
-      - TOOL
-      - SCRIPT
+      - SCRIPTING
       - CRAWLER
     - name: device.name
       level: extended
