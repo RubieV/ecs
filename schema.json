@@ -2383,6 +2383,16 @@
   "user_agent": {
     "description": "The user_agent fields normally come from a browser request.\nThey often show up in web service logs coming from the parsed user agent string.\n", 
     "fields": {
+      "user_agent.device.category": {
+        "description": "Category of the user agent", 
+        "example": "['SCANNER', 'BROWSER', 'TOOL', 'SCRIPT', 'CRAWLER']", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "user_agent.device.category", 
+        "required": false, 
+        "type": "keyword"
+      }, 
       "user_agent.device.name": {
         "description": "Name of the device.", 
         "example": "iPhone", 

@@ -3655,6 +3655,21 @@ user.name:
   order: 1
   short: Short name or login of the user.
   type: keyword
+user_agent.device.category:
+  description: Category of the user agent
+  example:
+  - SCANNER
+  - BROWSER
+  - TOOL
+  - SCRIPT
+  - CRAWLER
+  flat_name: user_agent.device.category
+  ignore_above: 1024
+  level: extended
+  name: device.category
+  order: 4
+  short: Category of the user agent
+  type: keyword
 user_agent.device.name:
   description: Name of the device.
   example: iPhone

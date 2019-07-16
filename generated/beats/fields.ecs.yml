@@ -2518,6 +2518,17 @@
       They often show up in web service logs coming from the parsed user agent string.'
     type: group
     fields:
+    - name: device.category
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: Category of the user agent
+      example:
+      - SCANNER
+      - BROWSER
+      - TOOL
+      - SCRIPT
+      - CRAWLER
     - name: device.name
       level: extended
       type: keyword

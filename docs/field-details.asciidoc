@@ -3349,6 +3349,17 @@ They often show up in web service logs coming from the parsed user agent string.
 
 // ===============================================================
 
+| user_agent.device.category
+| Category of the user agent
+
+type: keyword
+
+example: `['SCANNER', 'BROWSER', 'TOOL', 'SCRIPT', 'CRAWLER']`
+
+| extended
+
+// ===============================================================
+
 | user_agent.device.name
 | Name of the device.
 
