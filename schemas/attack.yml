@@ -95,15 +95,6 @@
       example: >
         ["RECONNAISSANCE", "WEAPONIZE", "DELIVERY", "EXPLOITATION", "INSTALLATION", "COMMAND AND CONTROL", "COLLECTION", "EXFILTRATION", "ACTIONS"]
 
-    - name: killchain.subcategory
-      level: extended
-      type: keyword
-      short: Stage of the attack.
-      description: >
-        Code prefixed by the source system, for example "CRS-942100"
-      example: >
-        ["FILE ENUMERATION", "SQL DATA EXFILTRATION"]
-
     - name: killchain.level
       level: extended
       type: long
@@ -122,12 +113,12 @@
       example: >
         ["BEHAVIOR", "HEURISTIC", "GENERIC", "EXACT"]
 
-    - name: stage
+    - name: mode
       level: extended
       type: keyword
       short: Stage of the rule lifcycle.
       description: >
-        Code prefixed by the source system, for example "CRS-942100"
+        Stage that the rule is in, from disabled to blocking.
       example: >
         ["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]
 

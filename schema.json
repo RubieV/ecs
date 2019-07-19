@@ -2437,6 +2437,6 @@
     "group": 2, 
     "name": "user_agent", 
     "title": "User agent", 
-    "type": "group"
+    "type": "object"
   }
 }
