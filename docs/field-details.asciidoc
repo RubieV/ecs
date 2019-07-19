@@ -303,12 +303,12 @@ example: `10`
 
 // ===============================================================
 
-| attack.killchain.subcategory
-| Code prefixed by the source system, for example "CRS-942100"
+| attack.mode
+| Stage that the rule is in, from disabled to blocking.
 
 type: keyword
 
-example: `["FILE ENUMERATION", "SQL DATA EXFILTRATION"]`
+example: `["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]`
 
 | extended
 
@@ -353,17 +353,6 @@ example: `54.183.57.254`
 type: keyword
 
 example: `["OWASP-A1", "PCI-6.5.10"]`
-
-| extended
-
-// ===============================================================
-
-| attack.stage
-| Code prefixed by the source system, for example "CRS-942100"
-
-type: keyword
-
-example: `["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]`
 
 | extended
 

@@ -190,12 +190,12 @@
         the category (1 to 9), the second digit represents a subcategory level (default
         0).
       example: '10'
-    - name: killchain.subcategory
+    - name: mode
       level: extended
       type: keyword
       ignore_above: 1024
-      description: Code prefixed by the source system, for example "CRS-942100"
-      example: '["FILE ENUMERATION", "SQL DATA EXFILTRATION"]'
+      description: Stage that the rule is in, from disabled to blocking.
+      example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
     - name: name
       level: extended
       type: text
@@ -219,12 +219,6 @@
       ignore_above: 1024
       description: Code prefixed by the source system, for example "CRS-942100"
       example: '["OWASP-A1", "PCI-6.5.10"]'
-    - name: stage
-      level: extended
-      type: keyword
-      ignore_above: 1024
-      description: Code prefixed by the source system, for example "CRS-942100"
-      example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
   - name: client
     title: Client
     group: 2

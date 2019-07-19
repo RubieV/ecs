@@ -170,13 +170,13 @@
         "required": false, 
         "type": "long"
       }, 
-      "attack.killchain.subcategory": {
-        "description": "Code prefixed by the source system, for example \"CRS-942100\"", 
-        "example": "[\"FILE ENUMERATION\", \"SQL DATA EXFILTRATION\"]", 
+      "attack.mode": {
+        "description": "Stage that the rule is in, from disabled to blocking.", 
+        "example": "[\"DISABLED\", \"TEST\", \"LEARN\", \"DETECT\", \"BLOCK\"]", 
         "footnote": "", 
         "group": 2, 
         "level": "extended", 
-        "name": "attack.killchain.subcategory", 
+        "name": "attack.mode", 
         "required": false, 
         "type": "keyword"
       }, 
@@ -217,16 +217,6 @@
         "group": 2, 
         "level": "extended", 
         "name": "attack.policy", 
-        "required": false, 
-        "type": "keyword"
-      }, 
-      "attack.stage": {
-        "description": "Code prefixed by the source system, for example \"CRS-942100\"", 
-        "example": "[\"DISABLED\", \"TEST\", \"LEARN\", \"DETECT\", \"BLOCK\"]", 
-        "footnote": "", 
-        "group": 2, 
-        "level": "extended", 
-        "name": "attack.stage", 
         "required": false, 
         "type": "keyword"
       }
@@ -2437,6 +2427,6 @@
     "group": 2, 
     "name": "user_agent", 
     "title": "User agent", 
-    "type": "object"
+    "type": "group"
   }
 }

@@ -53,9 +53,6 @@ type Attack struct {
 	// Code prefixed by the source system, for example "CRS-942100"
 	KillchainCategory string `ecs:"killchain.category"`
 
-	// Code prefixed by the source system, for example "CRS-942100"
-	KillchainSubcategory string `ecs:"killchain.subcategory"`
-
 	// The numeric categroy and subcategory level. The first digit represent
 	// the category (1 to 9), the second digit represents a subcategory level
 	// (default 0).
@@ -64,8 +61,8 @@ type Attack struct {
 	// The type of certainty that there is an actual positive
 	Certainty string `ecs:"certainty"`
 
-	// Code prefixed by the source system, for example "CRS-942100"
-	Stage string `ecs:"stage"`
+	// Stage that the rule is in, from disabled to blocking.
+	Mode string `ecs:"mode"`
 
 	// The file or policy location that the rule belongs to
 	Configuration string `ecs:"configuration"`

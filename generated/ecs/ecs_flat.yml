@@ -129,7 +129,7 @@ attack.certainty:
   ignore_above: 1024
   level: extended
   name: certainty
-  order: 12
+  order: 11
   short: Certainty of the match
   type: keyword
 attack.configuration:
@@ -139,7 +139,7 @@ attack.configuration:
   ignore_above: 1024
   level: extended
   name: configuration
-  order: 14
+  order: 13
   short: File or congiruation path
   type: keyword
 attack.description:
@@ -182,18 +182,18 @@ attack.killchain.level:
   flat_name: attack.killchain.level
   level: extended
   name: killchain.level
-  order: 11
-  short: Stage of the attack.
-  type: long
-attack.killchain.subcategory:
-  description: Code prefixed by the source system, for example "CRS-942100"
-  example: '["FILE ENUMERATION", "SQL DATA EXFILTRATION"]'
-  flat_name: attack.killchain.subcategory
-  ignore_above: 1024
-  level: extended
-  name: killchain.subcategory
   order: 10
   short: Stage of the attack.
+  type: long
+attack.mode:
+  description: Stage that the rule is in, from disabled to blocking.
+  example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
+  flat_name: attack.mode
+  ignore_above: 1024
+  level: extended
+  name: mode
+  order: 12
+  short: Stage of the rule lifcycle.
   type: keyword
 attack.name:
   description: Description of the rule data.
@@ -235,16 +235,6 @@ attack.policy:
   name: policy
   order: 8
   short: Class of the violatoin, such as "POLICY_VIOLATION".
-  type: keyword
-attack.stage:
-  description: Code prefixed by the source system, for example "CRS-942100"
-  example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
-  flat_name: attack.stage
-  ignore_above: 1024
-  level: extended
-  name: stage
-  order: 13
-  short: Stage of the rule lifcycle.
   type: keyword
 client.address:
   description: 'Some event client addresses are defined ambiguously. The event will
