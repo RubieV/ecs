@@ -102,7 +102,7 @@
       }, 
       "attack.category": {
         "description": "The attack category", 
-        "example": "[\"PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT\", \"INFORMATIONAL\", \"AUTOMATION_CRAWLER\", \"BEHAVIOR_INSUFFICIENT_AUTHENTICATION\"]", 
+        "example": "[\"PROTOCOL_VIOLATION\", \"INFORMATIONAL\", \"AUTOMATION\", \"BEHAVIOR\"]", 
         "footnote": "", 
         "group": 2, 
         "level": "extended", 
@@ -188,7 +188,7 @@
         "level": "extended", 
         "name": "attack.name", 
         "required": false, 
-        "type": "text"
+        "type": "keyword"
       }, 
       "attack.path": {
         "description": "Unique path to the system and the location in the system where the payload is inserted to", 
@@ -201,14 +201,14 @@
         "type": "keyword"
       }, 
       "attack.payload": {
-        "description": "Description of the rule data.", 
-        "example": "54.183.57.254", 
+        "description": "Payload that the rule is triggered on", 
+        "example": "alert(1)", 
         "footnote": "", 
         "group": 2, 
         "level": "extended", 
         "name": "attack.payload", 
         "required": false, 
-        "type": "text"
+        "type": "keyword"
       }, 
       "attack.policy": {
         "description": "Code prefixed by the source system, for example \"CRS-942100\"", 
@@ -217,6 +217,16 @@
         "group": 2, 
         "level": "extended", 
         "name": "attack.policy", 
+        "required": false, 
+        "type": "keyword"
+      }, 
+      "attack.subcategory": {
+        "description": "The attack category", 
+        "example": "[\"PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT\", \"INFORMATIONAL\", \"AUTOMATION_CRAWLER\", \"BEHAVIOR_INSUFFICIENT_AUTHENTICATION\"]", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "attack.subcategory", 
         "required": false, 
         "type": "keyword"
       }
@@ -2233,7 +2243,7 @@
         "level": "extended", 
         "name": "url.parameters", 
         "required": false, 
-        "type": "(not indexed)"
+        "type": "object"
       }, 
       "url.password": {
         "description": "Password of the request.", 

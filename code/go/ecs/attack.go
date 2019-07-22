@@ -31,14 +31,14 @@ type Attack struct {
 	// Description of the rule data.
 	Description string `ecs:"description"`
 
-	// Description of the rule data.
+	// Payload that the rule is triggered on
 	Payload string `ecs:"payload"`
-
-	// Description of the rule data.
-	Description string `ecs:"description"`
 
 	// The attack category
 	Category string `ecs:"category"`
+
+	// The attack category
+	Subcategory string `ecs:"subcategory"`
 
 	// Unique path to the system and the location in the system where the
 	// payload is inserted to

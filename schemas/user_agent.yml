@@ -23,6 +23,7 @@
       example: Safari
       description: >
         Name of the user agent.
+
     - name: version
       level: extended
       type: keyword

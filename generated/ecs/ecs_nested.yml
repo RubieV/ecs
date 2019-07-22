@@ -138,13 +138,12 @@ attack:
       type: keyword
     category:
       description: The attack category
-      example: '["PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT", "INFORMATIONAL", "AUTOMATION_CRAWLER",
-        "BEHAVIOR_INSUFFICIENT_AUTHENTICATION"]'
+      example: '["PROTOCOL_VIOLATION", "INFORMATIONAL", "AUTOMATION", "BEHAVIOR"]'
       flat_name: attack.category
       ignore_above: 1024
       level: extended
       name: category
-      order: 5
+      order: 4
       short: Category of the violatoin
       type: keyword
     certainty:
@@ -175,7 +174,7 @@ attack:
       level: extended
       name: description
       norms: false
-      order: 4
+      order: 2
       short: Description of the rule data.
       type: text
     id:
@@ -224,12 +223,12 @@ attack:
       description: Description of the rule data.
       example: Host header is a numeric IP address
       flat_name: attack.name
+      ignore_above: 1024
       level: extended
       name: name
-      norms: false
       order: 1
       short: Description of the rule data.
-      type: text
+      type: keyword
     path:
       description: Unique path to the system and the location in the system where
         the payload is inserted to
@@ -242,15 +241,15 @@ attack:
       short: Location of the payload and the system
       type: keyword
     payload:
-      description: Description of the rule data.
-      example: 54.183.57.254
+      description: Payload that the rule is triggered on
+      example: alert(1)
       flat_name: attack.payload
+      ignore_above: 1024
       level: extended
       name: payload
-      norms: false
       order: 3
-      short: Description of the rule data.
-      type: text
+      short: Payload that the rule is triggered on
+      type: keyword
     policy:
       description: Code prefixed by the source system, for example "CRS-942100"
       example: '["OWASP-A1", "PCI-6.5.10"]'
@@ -260,6 +259,17 @@ attack:
       name: policy
       order: 8
       short: Class of the violatoin, such as "POLICY_VIOLATION".
+      type: keyword
+    subcategory:
+      description: The attack category
+      example: '["PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT", "INFORMATIONAL", "AUTOMATION_CRAWLER",
+        "BEHAVIOR_INSUFFICIENT_AUTHENTICATION"]'
+      flat_name: attack.subcategory
+      ignore_above: 1024
+      level: extended
+      name: subcategory
+      order: 5
+      short: Category of the violatoin
       type: keyword
   group: 2
   name: attack
@@ -3929,9 +3939,9 @@ url:
     parameters:
       description: The parametrs field describes the input parameters of the request,
         such as {"q":"elasticsearch"}.
-      doc_values: false
+      enable: false
+      enabled: false
       flat_name: url.parameters
-      index: false
       level: extended
       name: parameters
       object_type: keyword

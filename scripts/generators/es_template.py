@@ -40,6 +40,9 @@ def entry_for(field):
         if 'index' in field and not field['index']:
             ecs_helpers.dict_copy_existing_keys(field, dict, ['index', 'doc_values'])
 
+        if 'enable' in field and not field['enable']:
+            ecs_helpers.dict_copy_existing_keys(field, dict, ['enabled'])
+
         if field['type'] == 'keyword':
             ecs_helpers.dict_copy_existing_keys(field, dict, ['ignore_above'])
         elif field['type'] == 'text':
@@ -73,7 +76,7 @@ def save_json(file, data):
 
 def template_settings():
     return {
-        "index_patterns": ["ecs-*"],
+        "index_patterns": ["securely-*"],
         "order": 1,
         "settings": {
             "index": {

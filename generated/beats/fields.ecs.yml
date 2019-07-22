@@ -150,8 +150,7 @@
       type: keyword
       ignore_above: 1024
       description: The attack category
-      example: '["PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT", "INFORMATIONAL", "AUTOMATION_CRAWLER",
-        "BEHAVIOR_INSUFFICIENT_AUTHENTICATION"]'
+      example: '["PROTOCOL_VIOLATION", "INFORMATIONAL", "AUTOMATION", "BEHAVIOR"]'
     - name: certainty
       level: extended
       type: keyword
@@ -198,7 +197,8 @@
       example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
     - name: name
       level: extended
-      type: text
+      type: keyword
+      ignore_above: 1024
       description: Description of the rule data.
       example: Host header is a numeric IP address
     - name: path
@@ -210,15 +210,23 @@
       example: damn-vulnerable-application > /vulnerability/sql.php > id
     - name: payload
       level: extended
-      type: text
-      description: Description of the rule data.
-      example: 54.183.57.254
+      type: keyword
+      ignore_above: 1024
+      description: Payload that the rule is triggered on
+      example: alert(1)
     - name: policy
       level: extended
       type: keyword
       ignore_above: 1024
       description: Code prefixed by the source system, for example "CRS-942100"
       example: '["OWASP-A1", "PCI-6.5.10"]'
+    - name: subcategory
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: The attack category
+      example: '["PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT", "INFORMATIONAL", "AUTOMATION_CRAWLER",
+        "BEHAVIOR_INSUFFICIENT_AUTHENTICATION"]'
   - name: client
     title: Client
     group: 2

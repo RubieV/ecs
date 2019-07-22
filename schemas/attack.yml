@@ -20,7 +20,7 @@
 
     - name: name
       level: extended
-      type: text
+      type: keyword
       description: >
         Description of the rule data.
       example: >
@@ -36,21 +36,22 @@
 
     - name: payload
       level: extended
-      type: text
+      type: keyword
       description: >
-        Description of the rule data.
+        Payload that the rule is triggered on
       example: >
-        54.183.57.254
-
-    - name: description
-      level: extended
-      type: text
-      description: >
-        Description of the rule data.
-      example: >
-        Matched "Operator `Rx' with parameter `^[d.:]+$' against variable `REQUEST_HEADERS:Host' (Value: `54.183.57.254' )
+        alert(1)
 
     - name: category
+      level: extended
+      type: keyword
+      short: Category of the violatoin
+      description: >
+        The attack category
+      example: >
+        ["PROTOCOL_VIOLATION", "INFORMATIONAL", "AUTOMATION", "BEHAVIOR"]
+
+    - name: subcategory
       level: extended
       type: keyword
       short: Category of the violatoin

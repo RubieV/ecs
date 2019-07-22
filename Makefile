@@ -97,7 +97,9 @@ reload_docs: generator docs
 # Generate schema.json.
 .PHONY: schema.json
 schema.json: ve
-	$(PYTHON) scripts/schemas.py
+	$(PYTHON) scripts/schemas.py && sed -i 's/"attack": {/"attack": {\
+        "type": "nested",\
+        "include_in_parent": true,/' generated/elasticsearch/{6,7}/template.json
 
 # Download and setup tooling dependencies.
 .PHONY: setup

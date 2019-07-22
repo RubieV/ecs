@@ -104,18 +104,22 @@
               "type": "keyword"
             },
             "name": {
-              "norms": false,
-              "type": "text"
+              "ignore_above": 1024,
+              "type": "keyword"
             },
             "path": {
               "ignore_above": 1024,
               "type": "keyword"
             },
             "payload": {
-              "norms": false,
-              "type": "text"
+              "ignore_above": 1024,
+              "type": "keyword"
             },
             "policy": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "subcategory": {
               "ignore_above": 1024,
               "type": "keyword"
             }
@@ -922,7 +926,6 @@
               "type": "keyword"
             },
             "parameters": {
-              "index": false,
               "type": "object"
             },
             "password": {

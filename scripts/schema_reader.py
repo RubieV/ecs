@@ -100,6 +100,10 @@ def field_set_defaults(field):
 
     if 'index' in field and not field['index']:
         dict_set_default(field, 'doc_values', False)
+
+    if 'enable' in field and not field['enable']:
+        dict_set_default(field, 'enabled', False)
+
     if 'multi_fields' in field:
         field_set_multi_field_defaults(field)
 
