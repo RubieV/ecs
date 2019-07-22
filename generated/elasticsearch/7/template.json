@@ -62,6 +62,7 @@
         }
       }, 
       "attack": {
+        "type": "nested",
         "properties": {
           "applicable_systems": {
             "ignore_above": 1024, 

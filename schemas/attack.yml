@@ -8,7 +8,7 @@
 
     For example, ModSecurity events, or F5 ASM violations.
 
-  type: group
+  type: nested
   fields:
     - name: id
       level: extended

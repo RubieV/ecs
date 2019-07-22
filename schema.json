@@ -224,7 +224,7 @@
     "group": 2, 
     "name": "attack", 
     "title": "Attack", 
-    "type": "group"
+    "type": "nested"
   }, 
   "base": {
     "description": "The `base` field set contains all fields which are on the top level. These fields are common across all types of events.\n", 
