@@ -84,7 +84,7 @@
     - name: parameters
       level: extended
       type: object
-      index: False
+      index: false
       short: Input parameters of the request.
       description: >
         The parametrs field describes the input parameters of the request,
