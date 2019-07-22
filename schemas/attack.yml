@@ -114,7 +114,7 @@
       example: >
         ["BEHAVIOR", "HEURISTIC", "GENERIC", "EXACT"]
 
-    - name: mode
+    - name: stage
       level: extended
       type: keyword
       short: Stage of the rule lifcycle.
