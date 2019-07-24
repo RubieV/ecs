@@ -18,11 +18,12 @@ attack.description,text,extended,"Matched ""Operator `Rx' with parameter `^[d.:]
 attack.id,keyword,extended,CRS-942100,1.1.0-dev
 attack.killchain.category,keyword,extended,"[""RECONNAISSANCE"", ""WEAPONIZE"", ""DELIVERY"", ""EXPLOITATION"", ""INSTALLATION"", ""COMMAND AND CONTROL"", ""COLLECTION"", ""EXFILTRATION"", ""ACTIONS""]",1.1.0-dev
 attack.killchain.level,long,extended,10,1.1.0-dev
-attack.mode,keyword,extended,"[""DISABLED"", ""TEST"", ""LEARN"", ""DETECT"", ""BLOCK""]",1.1.0-dev
 attack.name,keyword,extended,Host header is a numeric IP address,1.1.0-dev
 attack.path,keyword,extended,damn-vulnerable-application > /vulnerability/sql.php > id,1.1.0-dev
 attack.payload,keyword,extended,alert(1),1.1.0-dev
 attack.policy,keyword,extended,"[""OWASP-A1"", ""PCI-6.5.10""]",1.1.0-dev
+attack.raw_input,keyword,extended,Hi! <script>alert(1)</script>,1.1.0-dev
+attack.stage,keyword,extended,"[""DISABLED"", ""TEST"", ""LEARN"", ""DETECT"", ""BLOCK""]",1.1.0-dev
 attack.subcategory,keyword,extended,"[""PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT"", ""INFORMATIONAL"", ""AUTOMATION_CRAWLER"", ""BEHAVIOR_INSUFFICIENT_AUTHENTICATION""]",1.1.0-dev
 client.address,keyword,extended,,1.1.0-dev
 client.as.number,long,extended,15169,1.1.0-dev
@@ -190,6 +191,7 @@ http.request.referrer,keyword,extended,https://blog.example.com/,1.1.0-dev
 http.response.body.bytes,long,extended,887,1.1.0-dev
 http.response.body.content,keyword,extended,Hello world,1.1.0-dev
 http.response.bytes,long,extended,1437,1.1.0-dev
+http.response.headers.content,text,extended,Hello world,1.1.0-dev
 http.response.status_code,long,extended,404,1.1.0-dev
 http.version,keyword,extended,1.1,1.1.0-dev
 log.level,keyword,core,err,1.1.0-dev

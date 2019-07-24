@@ -303,17 +303,6 @@ example: `10`
 
 // ===============================================================
 
-| attack.mode
-| Stage that the rule is in, from disabled to blocking.
-
-type: keyword
-
-example: `["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]`
-
-| extended
-
-// ===============================================================
-
 | attack.name
 | Description of the rule data.
 
@@ -353,6 +342,28 @@ example: `alert(1)`
 type: keyword
 
 example: `["OWASP-A1", "PCI-6.5.10"]`
+
+| extended
+
+// ===============================================================
+
+| attack.raw_input
+| Context that was seen around the payload
+
+type: keyword
+
+example: `Hi! <script>alert(1)</script>`
+
+| extended
+
+// ===============================================================
+
+| attack.stage
+| Stage that the rule is in, from disabled to blocking.
+
+type: keyword
+
+example: `["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]`
 
 | extended
 
@@ -1958,6 +1969,17 @@ example: `Hello world`
 type: long
 
 example: `1437`
+
+| extended
+
+// ===============================================================
+
+| http.response.headers.content
+| The full HTTP response body.
+
+type: text
+
+example: `Hello world`
 
 | extended
 

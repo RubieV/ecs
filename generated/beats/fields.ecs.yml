@@ -189,12 +189,6 @@
         the category (1 to 9), the second digit represents a subcategory level (default
         0).
       example: '10'
-    - name: mode
-      level: extended
-      type: keyword
-      ignore_above: 1024
-      description: Stage that the rule is in, from disabled to blocking.
-      example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
     - name: name
       level: extended
       type: keyword
@@ -220,6 +214,18 @@
       ignore_above: 1024
       description: Code prefixed by the source system, for example "CRS-942100"
       example: '["OWASP-A1", "PCI-6.5.10"]'
+    - name: raw_input
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: Context that was seen around the payload
+      example: Hi! <script>alert(1)</script>
+    - name: stage
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: Stage that the rule is in, from disabled to blocking.
+      example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
     - name: subcategory
       level: extended
       type: keyword
@@ -1448,6 +1454,11 @@
       format: bytes
       description: Total size in bytes of the response (body and headers).
       example: 1437
+    - name: response.headers.content
+      level: extended
+      type: text
+      description: The full HTTP response body.
+      example: Hello world
     - name: response.status_code
       level: extended
       type: long

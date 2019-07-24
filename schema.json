@@ -170,16 +170,6 @@
         "required": false, 
         "type": "long"
       }, 
-      "attack.mode": {
-        "description": "Stage that the rule is in, from disabled to blocking.", 
-        "example": "[\"DISABLED\", \"TEST\", \"LEARN\", \"DETECT\", \"BLOCK\"]", 
-        "footnote": "", 
-        "group": 2, 
-        "level": "extended", 
-        "name": "attack.mode", 
-        "required": false, 
-        "type": "keyword"
-      }, 
       "attack.name": {
         "description": "Description of the rule data.", 
         "example": "Host header is a numeric IP address", 
@@ -217,6 +207,26 @@
         "group": 2, 
         "level": "extended", 
         "name": "attack.policy", 
+        "required": false, 
+        "type": "keyword"
+      }, 
+      "attack.raw_input": {
+        "description": "Context that was seen around the payload", 
+        "example": "Hi! <script>alert(1)</script>", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "attack.raw_input", 
+        "required": false, 
+        "type": "keyword"
+      }, 
+      "attack.stage": {
+        "description": "Stage that the rule is in, from disabled to blocking.", 
+        "example": "[\"DISABLED\", \"TEST\", \"LEARN\", \"DETECT\", \"BLOCK\"]", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "attack.stage", 
         "required": false, 
         "type": "keyword"
       }, 
@@ -1435,6 +1445,16 @@
         "name": "http.response.bytes", 
         "required": false, 
         "type": "long"
+      }, 
+      "http.response.headers.content": {
+        "description": "The full HTTP response body.", 
+        "example": "Hello world", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "http.response.headers.content", 
+        "required": false, 
+        "type": "text"
       }, 
       "http.response.status_code": {
         "description": "HTTP response status code.", 

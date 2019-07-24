@@ -37,6 +37,9 @@ type Http struct {
 	ResponseStatusCode int64 `ecs:"response.status_code"`
 
 	// The full HTTP response body.
+	ResponseHeadersContent string `ecs:"response.headers.content"`
+
+	// The full HTTP response body.
 	ResponseBodyContent string `ecs:"response.body.content"`
 
 	// HTTP version.

@@ -42,6 +42,14 @@
       example: >
         alert(1)
 
+    - name: raw_input
+      level: extended
+      type: keyword
+      description: >
+        Context that was seen around the payload
+      example: >
+        Hi! <script>alert(1)</script>
+
     - name: category
       level: extended
       type: keyword

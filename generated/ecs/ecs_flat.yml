@@ -108,7 +108,7 @@ attack.applicable_systems:
   ignore_above: 1024
   level: extended
   name: applicable_systems
-  order: 7
+  order: 8
   short: Class of the violatoin, such as "POLICY_VIOLATION".
   type: keyword
 attack.category:
@@ -118,7 +118,7 @@ attack.category:
   ignore_above: 1024
   level: extended
   name: category
-  order: 4
+  order: 5
   short: Category of the violatoin
   type: keyword
 attack.certainty:
@@ -128,7 +128,7 @@ attack.certainty:
   ignore_above: 1024
   level: extended
   name: certainty
-  order: 11
+  order: 12
   short: Certainty of the match
   type: keyword
 attack.configuration:
@@ -138,7 +138,7 @@ attack.configuration:
   ignore_above: 1024
   level: extended
   name: configuration
-  order: 13
+  order: 14
   short: File or congiruation path
   type: keyword
 attack.description:
@@ -170,7 +170,7 @@ attack.killchain.category:
   ignore_above: 1024
   level: extended
   name: killchain.category
-  order: 9
+  order: 10
   short: Stage of the attack.
   type: keyword
 attack.killchain.level:
@@ -181,19 +181,9 @@ attack.killchain.level:
   flat_name: attack.killchain.level
   level: extended
   name: killchain.level
-  order: 10
+  order: 11
   short: Stage of the attack.
   type: long
-attack.mode:
-  description: Stage that the rule is in, from disabled to blocking.
-  example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
-  flat_name: attack.mode
-  ignore_above: 1024
-  level: extended
-  name: mode
-  order: 12
-  short: Stage of the rule lifcycle.
-  type: keyword
 attack.name:
   description: Description of the rule data.
   example: Host header is a numeric IP address
@@ -212,7 +202,7 @@ attack.path:
   ignore_above: 1024
   level: extended
   name: path
-  order: 6
+  order: 7
   short: Location of the payload and the system
   type: keyword
 attack.payload:
@@ -232,8 +222,28 @@ attack.policy:
   ignore_above: 1024
   level: extended
   name: policy
-  order: 8
+  order: 9
   short: Class of the violatoin, such as "POLICY_VIOLATION".
+  type: keyword
+attack.raw_input:
+  description: Context that was seen around the payload
+  example: Hi! <script>alert(1)</script>
+  flat_name: attack.raw_input
+  ignore_above: 1024
+  level: extended
+  name: raw_input
+  order: 4
+  short: Context that was seen around the payload
+  type: keyword
+attack.stage:
+  description: Stage that the rule is in, from disabled to blocking.
+  example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'
+  flat_name: attack.stage
+  ignore_above: 1024
+  level: extended
+  name: stage
+  order: 13
+  short: Stage of the rule lifcycle.
   type: keyword
 attack.subcategory:
   description: The attack category
@@ -243,7 +253,7 @@ attack.subcategory:
   ignore_above: 1024
   level: extended
   name: subcategory
-  order: 5
+  order: 6
   short: Category of the violatoin
   type: keyword
 client.address:
@@ -1986,7 +1996,7 @@ http.request.body.bytes:
   format: bytes
   level: extended
   name: request.body.bytes
-  order: 7
+  order: 8
   short: Size in bytes of the request body.
   type: long
 http.request.body.content:
@@ -2006,7 +2016,7 @@ http.request.bytes:
   format: bytes
   level: extended
   name: request.bytes
-  order: 6
+  order: 7
   short: Total size in bytes of the request (body and headers).
   type: long
 http.request.method:
@@ -2039,7 +2049,7 @@ http.response.body.bytes:
   format: bytes
   level: extended
   name: response.body.bytes
-  order: 9
+  order: 10
   short: Size in bytes of the response body.
   type: long
 http.response.body.content:
@@ -2049,7 +2059,7 @@ http.response.body.content:
   ignore_above: 1024
   level: extended
   name: response.body.content
-  order: 4
+  order: 5
   short: The full HTTP response body.
   type: keyword
 http.response.bytes:
@@ -2059,9 +2069,19 @@ http.response.bytes:
   format: bytes
   level: extended
   name: response.bytes
-  order: 8
+  order: 9
   short: Total size in bytes of the response (body and headers).
   type: long
+http.response.headers.content:
+  description: The full HTTP response body.
+  example: Hello world
+  flat_name: http.response.headers.content
+  level: extended
+  name: response.headers.content
+  norms: false
+  order: 4
+  short: The full HTTP response body.
+  type: text
 http.response.status_code:
   description: HTTP response status code.
   example: 404
@@ -2079,7 +2099,7 @@ http.version:
   ignore_above: 1024
   level: extended
   name: version
-  order: 5
+  order: 6
   short: HTTP version.
   type: keyword
 labels:

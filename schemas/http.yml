@@ -41,6 +41,13 @@
         HTTP response status code.
       example: 404
 
+    - name: response.headers.content
+      level: extended
+      type: text
+      description: >
+        The full HTTP response body.
+      example: Hello world
+
     - name: response.body.content
       level: extended
       type: keyword

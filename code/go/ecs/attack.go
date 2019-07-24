@@ -34,6 +34,9 @@ type Attack struct {
 	// Payload that the rule is triggered on
 	Payload string `ecs:"payload"`
 
+	// Context that was seen around the payload
+	RawInput string `ecs:"raw_input"`
+
 	// The attack category
 	Category string `ecs:"category"`
 
@@ -62,7 +65,7 @@ type Attack struct {
 	Certainty string `ecs:"certainty"`
 
 	// Stage that the rule is in, from disabled to blocking.
-	Mode string `ecs:"mode"`
+	Stage string `ecs:"stage"`
 
 	// The file or policy location that the rule belongs to
 	Configuration string `ecs:"configuration"`

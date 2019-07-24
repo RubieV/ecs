@@ -100,10 +100,6 @@
               }
             }
           }, 
-          "mode": {
-            "ignore_above": 1024, 
-            "type": "keyword"
-          }, 
           "name": {
             "ignore_above": 1024, 
             "type": "keyword"
@@ -117,6 +113,14 @@
             "type": "keyword"
           }, 
           "policy": {
+            "ignore_above": 1024, 
+            "type": "keyword"
+          }, 
+          "raw_input": {
+            "ignore_above": 1024, 
+            "type": "keyword"
+          }, 
+          "stage": {
             "ignore_above": 1024, 
             "type": "keyword"
           }, 
@@ -902,6 +906,14 @@
               "bytes": {
                 "type": "long"
               }, 
+              "headers": {
+                "properties": {
+                  "content": {
+                    "norms": false, 
+                    "type": "text"
+                  }
+                }
+              }, 
               "status_code": {
                 "type": "long"
               }
@@ -1628,6 +1640,7 @@
         }
       }, 
       "refresh_interval": "5s"
-    }
+    }, 
+    "number_of_shards": 1
   }
 }

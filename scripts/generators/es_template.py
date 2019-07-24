@@ -79,6 +79,7 @@ def template_settings():
         "index_patterns": ["securely-*"],
         "order": 1,
         "settings": {
+            "number_of_shards": 1,
             "index": {
                 "mapping": {
                     "total_fields": {
