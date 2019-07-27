@@ -1898,7 +1898,7 @@ example: `887`
 | http.request.body.content
 | The full HTTP request body.
 
-type: keyword
+type: text
 
 example: `Hello world`
 
@@ -1912,6 +1912,28 @@ example: `Hello world`
 type: long
 
 example: `1437`
+
+| extended
+
+// ===============================================================
+
+| http.request.header
+| The full HTTP request body.
+
+type: object
+
+example: `Hello world`
+
+| extended
+
+// ===============================================================
+
+| http.request.headers.content
+| The full HTTP request body.
+
+type: text
+
+example: `Hello world`
 
 | extended
 
@@ -1955,7 +1977,7 @@ example: `887`
 | http.response.body.content
 | The full HTTP response body.
 
-type: keyword
+type: text
 
 example: `Hello world`
 

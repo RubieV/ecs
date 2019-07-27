@@ -872,13 +872,25 @@
                     "type": "long"
                   }, 
                   "content": {
-                    "ignore_above": 1024, 
-                    "type": "keyword"
+                    "norms": false, 
+                    "type": "text"
                   }
                 }
               }, 
               "bytes": {
                 "type": "long"
+              }, 
+              "header": {
+                "enabled": false, 
+                "type": "object"
+              }, 
+              "headers": {
+                "properties": {
+                  "content": {
+                    "norms": false, 
+                    "type": "text"
+                  }
+                }
               }, 
               "method": {
                 "ignore_above": 1024, 
@@ -898,8 +910,8 @@
                     "type": "long"
                   }, 
                   "content": {
-                    "ignore_above": 1024, 
-                    "type": "keyword"
+                    "norms": false, 
+                    "type": "text"
                   }
                 }
               }, 

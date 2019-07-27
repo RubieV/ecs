@@ -19,9 +19,25 @@
         the documentation section "Implementing ECS".
       example: get, post, put
 
+    - name: request.headers.content
+      level: extended
+      type: text
+      description: >
+        The full HTTP request body.
+      example: Hello world
+
+    - name: request.header
+      level: extended
+      type: object
+      object_type: keyword
+      enable: false
+      description: >
+        The full HTTP request body.
+      example: Hello world
+
     - name: request.body.content
       level: extended
-      type: keyword
+      type: text
       description: >
         The full HTTP request body.
       example: Hello world
@@ -50,7 +66,7 @@
 
     - name: response.body.content
       level: extended
-      type: keyword
+      type: text
       description: >
         The full HTTP response body.
       example: Hello world

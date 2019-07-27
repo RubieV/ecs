@@ -184,12 +184,14 @@ host.user.hash,keyword,extended,,1.1.0-dev
 host.user.id,keyword,core,,1.1.0-dev
 host.user.name,keyword,core,albert,1.1.0-dev
 http.request.body.bytes,long,extended,887,1.1.0-dev
-http.request.body.content,keyword,extended,Hello world,1.1.0-dev
+http.request.body.content,text,extended,Hello world,1.1.0-dev
 http.request.bytes,long,extended,1437,1.1.0-dev
+http.request.header,object,extended,Hello world,1.1.0-dev
+http.request.headers.content,text,extended,Hello world,1.1.0-dev
 http.request.method,keyword,extended,"get, post, put",1.1.0-dev
 http.request.referrer,keyword,extended,https://blog.example.com/,1.1.0-dev
 http.response.body.bytes,long,extended,887,1.1.0-dev
-http.response.body.content,keyword,extended,Hello world,1.1.0-dev
+http.response.body.content,text,extended,Hello world,1.1.0-dev
 http.response.bytes,long,extended,1437,1.1.0-dev
 http.response.headers.content,text,extended,Hello world,1.1.0-dev
 http.response.status_code,long,extended,404,1.1.0-dev

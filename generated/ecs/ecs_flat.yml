@@ -1996,19 +1996,19 @@ http.request.body.bytes:
   format: bytes
   level: extended
   name: request.body.bytes
-  order: 8
+  order: 10
   short: Size in bytes of the request body.
   type: long
 http.request.body.content:
   description: The full HTTP request body.
   example: Hello world
   flat_name: http.request.body.content
-  ignore_above: 1024
   level: extended
   name: request.body.content
-  order: 1
+  norms: false
+  order: 3
   short: The full HTTP request body.
-  type: keyword
+  type: text
 http.request.bytes:
   description: Total size in bytes of the request (body and headers).
   example: 1437
@@ -2016,9 +2016,31 @@ http.request.bytes:
   format: bytes
   level: extended
   name: request.bytes
-  order: 7
+  order: 9
   short: Total size in bytes of the request (body and headers).
   type: long
+http.request.header:
+  description: The full HTTP request body.
+  enable: false
+  enabled: false
+  example: Hello world
+  flat_name: http.request.header
+  level: extended
+  name: request.header
+  object_type: keyword
+  order: 2
+  short: The full HTTP request body.
+  type: object
+http.request.headers.content:
+  description: The full HTTP request body.
+  example: Hello world
+  flat_name: http.request.headers.content
+  level: extended
+  name: request.headers.content
+  norms: false
+  order: 1
+  short: The full HTTP request body.
+  type: text
 http.request.method:
   description: 'HTTP request method.
 
@@ -2039,7 +2061,7 @@ http.request.referrer:
   ignore_above: 1024
   level: extended
   name: request.referrer
-  order: 2
+  order: 4
   short: Referrer for this HTTP request.
   type: keyword
 http.response.body.bytes:
@@ -2049,19 +2071,19 @@ http.response.body.bytes:
   format: bytes
   level: extended
   name: response.body.bytes
-  order: 10
+  order: 12
   short: Size in bytes of the response body.
   type: long
 http.response.body.content:
   description: The full HTTP response body.
   example: Hello world
   flat_name: http.response.body.content
-  ignore_above: 1024
   level: extended
   name: response.body.content
-  order: 5
+  norms: false
+  order: 7
   short: The full HTTP response body.
-  type: keyword
+  type: text
 http.response.bytes:
   description: Total size in bytes of the response (body and headers).
   example: 1437
@@ -2069,7 +2091,7 @@ http.response.bytes:
   format: bytes
   level: extended
   name: response.bytes
-  order: 9
+  order: 11
   short: Total size in bytes of the response (body and headers).
   type: long
 http.response.headers.content:
@@ -2079,7 +2101,7 @@ http.response.headers.content:
   level: extended
   name: response.headers.content
   norms: false
-  order: 4
+  order: 6
   short: The full HTTP response body.
   type: text
 http.response.status_code:
@@ -2089,7 +2111,7 @@ http.response.status_code:
   format: string
   level: extended
   name: response.status_code
-  order: 3
+  order: 5
   short: HTTP response status code.
   type: long
 http.version:
@@ -2099,7 +2121,7 @@ http.version:
   ignore_above: 1024
   level: extended
   name: version
-  order: 6
+  order: 8
   short: HTTP version.
   type: keyword
 labels:

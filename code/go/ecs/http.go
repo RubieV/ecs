@@ -28,6 +28,12 @@ type Http struct {
 	RequestMethod string `ecs:"request.method"`
 
 	// The full HTTP request body.
+	RequestHeadersContent string `ecs:"request.headers.content"`
+
+	// The full HTTP request body.
+	RequestHeader map[string]interface{} `ecs:"request.header"`
+
+	// The full HTTP request body.
 	RequestBodyContent string `ecs:"request.body.content"`
 
 	// Referrer for this HTTP request.

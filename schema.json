@@ -1384,7 +1384,7 @@
         "level": "extended", 
         "name": "http.request.body.content", 
         "required": false, 
-        "type": "keyword"
+        "type": "text"
       }, 
       "http.request.bytes": {
         "description": "Total size in bytes of the request (body and headers).", 
@@ -1395,6 +1395,26 @@
         "name": "http.request.bytes", 
         "required": false, 
         "type": "long"
+      }, 
+      "http.request.header": {
+        "description": "The full HTTP request body.", 
+        "example": "Hello world", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "http.request.header", 
+        "required": false, 
+        "type": "object"
+      }, 
+      "http.request.headers.content": {
+        "description": "The full HTTP request body.", 
+        "example": "Hello world", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "http.request.headers.content", 
+        "required": false, 
+        "type": "text"
       }, 
       "http.request.method": {
         "description": "HTTP request method.\nThe field value must be normalized to lowercase for querying. See the documentation section \"Implementing ECS\".", 
@@ -1434,7 +1454,7 @@
         "level": "extended", 
         "name": "http.response.body.content", 
         "required": false, 
-        "type": "keyword"
+        "type": "text"
       }, 
       "http.response.bytes": {
         "description": "Total size in bytes of the response (body and headers).", 
