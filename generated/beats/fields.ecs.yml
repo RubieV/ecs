@@ -189,6 +189,18 @@
         the category (1 to 9), the second digit represents a subcategory level (default
         0).
       example: '10'
+    - name: killchain.reason
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: Explanation of the decision.
+      example: '["A 4xx error code is returned", "An exception is triggered", "The
+        base score for this category"]'
+    - name: killchain.risk_score
+      level: core
+      type: float
+      description: Risk score or priority of the event (e.g. security solutions).
+        Use your system's original value here.
     - name: name
       level: extended
       type: keyword

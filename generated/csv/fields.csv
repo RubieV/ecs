@@ -18,6 +18,8 @@ attack.description,text,extended,"Matched ""Operator `Rx' with parameter `^[d.:]
 attack.id,keyword,extended,CRS-942100,1.1.0-dev
 attack.killchain.category,keyword,extended,"[""RECONNAISSANCE"", ""WEAPONIZE"", ""DELIVERY"", ""EXPLOITATION"", ""INSTALLATION"", ""COMMAND AND CONTROL"", ""COLLECTION"", ""EXFILTRATION"", ""ACTIONS""]",1.1.0-dev
 attack.killchain.level,long,extended,10,1.1.0-dev
+attack.killchain.reason,keyword,extended,"[""A 4xx error code is returned"", ""An exception is triggered"", ""The base score for this category""]",1.1.0-dev
+attack.killchain.risk_score,float,core,,1.1.0-dev
 attack.name,keyword,extended,Host header is a numeric IP address,1.1.0-dev
 attack.path,keyword,extended,damn-vulnerable-application > /vulnerability/sql.php > id,1.1.0-dev
 attack.payload,keyword,extended,alert(1),1.1.0-dev

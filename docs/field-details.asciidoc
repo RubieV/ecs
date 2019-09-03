@@ -303,6 +303,28 @@ example: `10`
 
 // ===============================================================
 
+| attack.killchain.reason
+| Explanation of the decision.
+
+type: keyword
+
+example: `["A 4xx error code is returned", "An exception is triggered", "The base score for this category"]`
+
+| extended
+
+// ===============================================================
+
+| attack.killchain.risk_score
+| Risk score or priority of the event (e.g. security solutions). Use your system's original value here.
+
+type: float
+
+
+
+| core
+
+// ===============================================================
+
 | attack.name
 | Description of the rule data.
 

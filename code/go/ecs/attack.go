@@ -53,6 +53,13 @@ type Attack struct {
 	// Code prefixed by the source system, for example "CRS-942100"
 	Policy string `ecs:"policy"`
 
+	// Risk score or priority of the event (e.g. security solutions). Use your
+	// system's original value here.
+	KillchainRiskScore float64 `ecs:"killchain.risk_score"`
+
+	// Explanation of the decision.
+	KillchainReason string `ecs:"killchain.reason"`
+
 	// Code prefixed by the source system, for example "CRS-942100"
 	KillchainCategory string `ecs:"killchain.category"`
 

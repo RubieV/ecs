@@ -128,7 +128,7 @@ attack.certainty:
   ignore_above: 1024
   level: extended
   name: certainty
-  order: 12
+  order: 14
   short: Certainty of the match
   type: keyword
 attack.configuration:
@@ -138,7 +138,7 @@ attack.configuration:
   ignore_above: 1024
   level: extended
   name: configuration
-  order: 14
+  order: 16
   short: File or congiruation path
   type: keyword
 attack.description:
@@ -170,7 +170,7 @@ attack.killchain.category:
   ignore_above: 1024
   level: extended
   name: killchain.category
-  order: 10
+  order: 12
   short: Stage of the attack.
   type: keyword
 attack.killchain.level:
@@ -181,9 +181,30 @@ attack.killchain.level:
   flat_name: attack.killchain.level
   level: extended
   name: killchain.level
-  order: 11
+  order: 13
   short: Stage of the attack.
   type: long
+attack.killchain.reason:
+  description: Explanation of the decision.
+  example: '["A 4xx error code is returned", "An exception is triggered", "The base
+    score for this category"]'
+  flat_name: attack.killchain.reason
+  ignore_above: 1024
+  level: extended
+  name: killchain.reason
+  order: 11
+  short: Explanation of the decision.
+  type: keyword
+attack.killchain.risk_score:
+  description: Risk score or priority of the event (e.g. security solutions). Use
+    your system's original value here.
+  flat_name: attack.killchain.risk_score
+  level: core
+  name: killchain.risk_score
+  order: 10
+  short: Risk score or priority of the event (e.g. security solutions). Use your system's
+    original value here.
+  type: float
 attack.name:
   description: Description of the rule data.
   example: Host header is a numeric IP address
@@ -242,7 +263,7 @@ attack.stage:
   ignore_above: 1024
   level: extended
   name: stage
-  order: 13
+  order: 15
   short: Stage of the rule lifcycle.
   type: keyword
 attack.subcategory:

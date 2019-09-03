@@ -97,6 +97,13 @@
               }, 
               "level": {
                 "type": "long"
+              }, 
+              "reason": {
+                "ignore_above": 1024, 
+                "type": "keyword"
+              }, 
+              "risk_score": {
+                "type": "float"
               }
             }
           }, 
