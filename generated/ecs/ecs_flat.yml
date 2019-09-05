@@ -2153,7 +2153,7 @@ incident.description:
   level: extended
   name: description
   norms: false
-  order: 2
+  order: 3
   short: Description the user has given
   type: text
 incident.hash.md5:
@@ -2218,6 +2218,14 @@ incident.status:
   order: 1
   short: Current status of the incident
   type: keyword
+incident.updated:
+  description: Incident update time.
+  flat_name: incident.updated
+  level: extended
+  name: updated
+  order: 2
+  short: Incident update time.
+  type: date
 incident.url:
   description: URL that links to an (external) incident tracking system
   example: https://github.com/elastic/elasticsearch/issues/46373
@@ -2225,7 +2233,7 @@ incident.url:
   ignore_above: 1024
   level: extended
   name: url
-  order: 3
+  order: 4
   short: URL that links to an (external) incident tracking system
   type: keyword
 incident.user.domain:

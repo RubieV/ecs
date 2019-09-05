@@ -1542,6 +1542,10 @@
       ignore_above: 1024
       description: Current status of the incident
       example: OPEN, CLOSED, IN PROGRESS, TO DO
+    - name: updated
+      level: extended
+      type: date
+      description: Incident update time.
     - name: url
       level: extended
       type: keyword

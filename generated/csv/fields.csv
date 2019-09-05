@@ -205,6 +205,7 @@ incident.hash.sha256,keyword,extended,,1.1.0-dev
 incident.hash.sha512,keyword,extended,,1.1.0-dev
 incident.id,keyword,extended,e42b33e1-0809-4f98-9949-d639cb7e3226,1.1.0-dev
 incident.status,keyword,extended,"OPEN, CLOSED, IN PROGRESS, TO DO",1.1.0-dev
+incident.updated,date,extended,,1.1.0-dev
 incident.url,keyword,extended,https://github.com/elastic/elasticsearch/issues/46373,1.1.0-dev
 incident.user.domain,keyword,extended,,1.1.0-dev
 incident.user.email,keyword,extended,,1.1.0-dev

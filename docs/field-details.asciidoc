@@ -2101,6 +2101,17 @@ example: `OPEN, CLOSED, IN PROGRESS, TO DO`
 
 // ===============================================================
 
+| incident.updated
+| Incident update time.
+
+type: date
+
+
+
+| extended
+
+// ===============================================================
+
 | incident.url
 | URL that links to an (external) incident tracking system
 

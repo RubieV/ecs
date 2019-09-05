@@ -1555,6 +1555,16 @@
         "required": false, 
         "type": "keyword"
       }, 
+      "incident.updated": {
+        "description": "Incident update time.", 
+        "example": "", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "incident.updated", 
+        "required": false, 
+        "type": "date"
+      }, 
       "incident.url": {
         "description": "URL that links to an (external) incident tracking system", 
         "example": "https://github.com/elastic/elasticsearch/issues/46373", 

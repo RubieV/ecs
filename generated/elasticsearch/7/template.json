@@ -978,6 +978,9 @@
             "ignore_above": 1024, 
             "type": "keyword"
           }, 
+          "updated": {
+            "type": "date"
+          }, 
           "url": {
             "ignore_above": 1024, 
             "type": "keyword"
