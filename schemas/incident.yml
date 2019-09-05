@@ -25,6 +25,10 @@
         Current status of the incident
       example: >
         OPEN, CLOSED, IN PROGRESS, TO DO
+    - name: updated
+      level: extended
+      type: date
+      description: Incident update time.
     - name: description
       level: extended
       type: text
