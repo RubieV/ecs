@@ -1522,6 +1522,55 @@
     "title": "HTTP", 
     "type": "group"
   }, 
+  "incident": {
+    "description": "These fields can represent incidents related or opened on the current events.\nFor example, a GitLab issue or a Jira event. References the Hash schema to sign events by a user. References the User schema to reference a user that changed the incident status.\n", 
+    "fields": {
+      "incident.description": {
+        "description": "Description the user has given", 
+        "example": "Opened an incident as there was a risky injection technique that crashed the application.", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "incident.description", 
+        "required": false, 
+        "type": "text"
+      }, 
+      "incident.id": {
+        "description": "(Automatically generated) GUID v4 that is used to reference a group of events in a query", 
+        "example": "e42b33e1-0809-4f98-9949-d639cb7e3226", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "incident.id", 
+        "required": false, 
+        "type": "keyword"
+      }, 
+      "incident.status": {
+        "description": "Current status of the incident", 
+        "example": "OPEN, CLOSED, IN PROGRESS, TO DO", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "incident.status", 
+        "required": false, 
+        "type": "keyword"
+      }, 
+      "incident.url": {
+        "description": "URL that links to an (external) incident tracking system", 
+        "example": "https://github.com/elastic/elasticsearch/issues/46373", 
+        "footnote": "", 
+        "group": 2, 
+        "level": "extended", 
+        "name": "incident.url", 
+        "required": false, 
+        "type": "keyword"
+      }
+    }, 
+    "group": 2, 
+    "name": "incident", 
+    "title": "Incident", 
+    "type": "group"
+  }, 
   "log": {
     "description": "Fields which are specific to log events.\n", 
     "fields": {

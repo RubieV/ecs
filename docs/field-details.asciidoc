@@ -1736,7 +1736,7 @@ type: keyword
 
 ==== Field Reuse
 
-The `hash` fields are expected to be nested at: `file.hash`, `process.hash`.
+The `hash` fields are expected to be nested at: `file.hash`, `incident.hash`, `process.hash`.
 
 Note also that the `hash` fields are not expected to be used directly at the top level.
 
@@ -2050,6 +2050,96 @@ example: `1.1`
 | extended
 
 // ===============================================================
+
+|=====
+
+[[ecs-incident]]
+=== Incident Fields
+
+These fields can represent incidents related or opened on the current events.
+
+For example, a GitLab issue or a Jira event. References the Hash schema to sign events by a user. References the User schema to reference a user that changed the incident status.
+
+==== Incident Field Details
+
+[options="header"]
+|=====
+| Field  | Description | Level
+
+// ===============================================================
+
+| incident.description
+| Description the user has given
+
+type: text
+
+example: `Opened an incident as there was a risky injection technique that crashed the application.`
+
+| extended
+
+// ===============================================================
+
+| incident.id
+| (Automatically generated) GUID v4 that is used to reference a group of events in a query
+
+type: keyword
+
+example: `e42b33e1-0809-4f98-9949-d639cb7e3226`
+
+| extended
+
+// ===============================================================
+
+| incident.status
+| Current status of the incident
+
+type: keyword
+
+example: `OPEN, CLOSED, IN PROGRESS, TO DO`
+
+| extended
+
+// ===============================================================
+
+| incident.url
+| URL that links to an (external) incident tracking system
+
+type: keyword
+
+example: `https://github.com/elastic/elasticsearch/issues/46373`
+
+| extended
+
+// ===============================================================
+
+|=====
+
+==== Field Reuse
+
+
+
+
+[[ecs-incident-nestings]]
+===== Field sets that can be nested under Incident
+
+[options="header"]
+|=====
+| Nested fields | Description
+
+// ===============================================================
+
+
+| <<ecs-hash,incident.hash.*>>
+| Hashes, usually file hashes.
+
+// ===============================================================
+
+
+| <<ecs-user,incident.user.*>>
+| Fields to describe the user relevant to the event.
+
+// ===============================================================
+
 
 |=====
 
@@ -3375,7 +3465,7 @@ example: `albert`
 
 ==== Field Reuse
 
-The `user` fields are expected to be nested at: `client.user`, `destination.user`, `host.user`, `server.user`, `source.user`.
+The `user` fields are expected to be nested at: `client.user`, `destination.user`, `host.user`, `incident.user`, `server.user`, `source.user`.
 
 Note also that the `user` fields may be used directly at the top level.
 

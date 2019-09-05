@@ -1,0 +1,41 @@
+---
+- name: incident
+  title: Incident
+  group: 2
+  short: Fields about linked incidents.
+  description: >
+    These fields can represent incidents related or opened on the current events.
+
+    For example, a GitLab issue or a Jira event.
+    References the Hash schema to sign events by a user.
+    References the User schema to reference a user that changed the incident status.
+  type: group
+  fields:
+    - name: id
+      level: extended
+      type: keyword
+      description: >
+        (Automatically generated) GUID v4 that is used to reference a group of events in a query
+      example: >
+        e42b33e1-0809-4f98-9949-d639cb7e3226
+    - name: status
+      level: extended
+      type: keyword
+      description: >
+        Current status of the incident
+      example: >
+        OPEN, CLOSED, IN PROGRESS, TO DO
+    - name: description
+      level: extended
+      type: text
+      description: >
+        Description the user has given
+      example: >
+        Opened an incident as there was a risky injection technique that crashed the application.
+    - name: url
+      level: extended
+      type: keyword
+      description: >
+        URL that links to an (external) incident tracking system
+      example: >
+        https://github.com/elastic/elasticsearch/issues/46373

@@ -198,6 +198,22 @@ http.response.bytes,long,extended,1437,1.1.0-dev
 http.response.headers.content,text,extended,Hello world,1.1.0-dev
 http.response.status_code,long,extended,404,1.1.0-dev
 http.version,keyword,extended,1.1,1.1.0-dev
+incident.description,text,extended,Opened an incident as there was a risky injection technique that crashed the application.,1.1.0-dev
+incident.hash.md5,keyword,extended,,1.1.0-dev
+incident.hash.sha1,keyword,extended,,1.1.0-dev
+incident.hash.sha256,keyword,extended,,1.1.0-dev
+incident.hash.sha512,keyword,extended,,1.1.0-dev
+incident.id,keyword,extended,e42b33e1-0809-4f98-9949-d639cb7e3226,1.1.0-dev
+incident.status,keyword,extended,"OPEN, CLOSED, IN PROGRESS, TO DO",1.1.0-dev
+incident.url,keyword,extended,https://github.com/elastic/elasticsearch/issues/46373,1.1.0-dev
+incident.user.domain,keyword,extended,,1.1.0-dev
+incident.user.email,keyword,extended,,1.1.0-dev
+incident.user.full_name,keyword,extended,Albert Einstein,1.1.0-dev
+incident.user.group.id,keyword,extended,,1.1.0-dev
+incident.user.group.name,keyword,extended,,1.1.0-dev
+incident.user.hash,keyword,extended,,1.1.0-dev
+incident.user.id,keyword,core,,1.1.0-dev
+incident.user.name,keyword,core,albert,1.1.0-dev
 log.level,keyword,core,err,1.1.0-dev
 log.original,keyword,core,Sep 19 08:26:10 localhost My log,1.1.0-dev
 network.application,keyword,extended,aim,1.1.0-dev

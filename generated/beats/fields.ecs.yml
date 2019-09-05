@@ -1492,6 +1492,110 @@
       ignore_above: 1024
       description: HTTP version.
       example: 1.1
+  - name: incident
+    title: Incident
+    group: 2
+    description: 'These fields can represent incidents related or opened on the current
+      events.
+
+      For example, a GitLab issue or a Jira event. References the Hash schema to sign
+      events by a user. References the User schema to reference a user that changed
+      the incident status.'
+    type: group
+    fields:
+    - name: description
+      level: extended
+      type: text
+      description: Description the user has given
+      example: Opened an incident as there was a risky injection technique that crashed
+        the application.
+    - name: hash.md5
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: MD5 hash.
+    - name: hash.sha1
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: SHA1 hash.
+    - name: hash.sha256
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: SHA256 hash.
+    - name: hash.sha512
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: SHA512 hash.
+    - name: id
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: (Automatically generated) GUID v4 that is used to reference a group
+        of events in a query
+      example: e42b33e1-0809-4f98-9949-d639cb7e3226
+    - name: status
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: Current status of the incident
+      example: OPEN, CLOSED, IN PROGRESS, TO DO
+    - name: url
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: URL that links to an (external) incident tracking system
+      example: https://github.com/elastic/elasticsearch/issues/46373
+    - name: user.domain
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: 'Name of the directory the user is a member of.
+
+        For example, an LDAP or Active Directory domain name.'
+    - name: user.email
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: User email address.
+    - name: user.full_name
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: User's full name, if available.
+      example: Albert Einstein
+    - name: user.group.id
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: Unique identifier for the group on the system/platform.
+    - name: user.group.name
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: Name of the group.
+    - name: user.hash
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: 'Unique user hash to correlate information for a user in anonymized
+        form.
+
+        Useful if `user.id` or `user.name` contain confidential information and cannot
+        be used.'
+    - name: user.id
+      level: core
+      type: keyword
+      ignore_above: 1024
+      description: One or multiple unique identifiers of the user.
+    - name: user.name
+      level: core
+      type: keyword
+      ignore_above: 1024
+      description: Short name or login of the user.
+      example: albert
   - name: log
     title: Log
     group: 2

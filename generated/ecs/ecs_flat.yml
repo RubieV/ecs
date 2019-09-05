@@ -2145,6 +2145,177 @@ http.version:
   order: 8
   short: HTTP version.
   type: keyword
+incident.description:
+  description: Description the user has given
+  example: Opened an incident as there was a risky injection technique that crashed
+    the application.
+  flat_name: incident.description
+  level: extended
+  name: description
+  norms: false
+  order: 2
+  short: Description the user has given
+  type: text
+incident.hash.md5:
+  description: MD5 hash.
+  flat_name: incident.hash.md5
+  ignore_above: 1024
+  level: extended
+  name: md5
+  order: 0
+  original_fieldset: hash
+  short: MD5 hash.
+  type: keyword
+incident.hash.sha1:
+  description: SHA1 hash.
+  flat_name: incident.hash.sha1
+  ignore_above: 1024
+  level: extended
+  name: sha1
+  order: 1
+  original_fieldset: hash
+  short: SHA1 hash.
+  type: keyword
+incident.hash.sha256:
+  description: SHA256 hash.
+  flat_name: incident.hash.sha256
+  ignore_above: 1024
+  level: extended
+  name: sha256
+  order: 2
+  original_fieldset: hash
+  short: SHA256 hash.
+  type: keyword
+incident.hash.sha512:
+  description: SHA512 hash.
+  flat_name: incident.hash.sha512
+  ignore_above: 1024
+  level: extended
+  name: sha512
+  order: 3
+  original_fieldset: hash
+  short: SHA512 hash.
+  type: keyword
+incident.id:
+  description: (Automatically generated) GUID v4 that is used to reference a group
+    of events in a query
+  example: e42b33e1-0809-4f98-9949-d639cb7e3226
+  flat_name: incident.id
+  ignore_above: 1024
+  level: extended
+  name: id
+  order: 0
+  short: (Automatically generated) GUID v4 that is used to reference a group of events
+    in a query
+  type: keyword
+incident.status:
+  description: Current status of the incident
+  example: OPEN, CLOSED, IN PROGRESS, TO DO
+  flat_name: incident.status
+  ignore_above: 1024
+  level: extended
+  name: status
+  order: 1
+  short: Current status of the incident
+  type: keyword
+incident.url:
+  description: URL that links to an (external) incident tracking system
+  example: https://github.com/elastic/elasticsearch/issues/46373
+  flat_name: incident.url
+  ignore_above: 1024
+  level: extended
+  name: url
+  order: 3
+  short: URL that links to an (external) incident tracking system
+  type: keyword
+incident.user.domain:
+  description: 'Name of the directory the user is a member of.
+
+    For example, an LDAP or Active Directory domain name.'
+  flat_name: incident.user.domain
+  ignore_above: 1024
+  level: extended
+  name: domain
+  order: 5
+  original_fieldset: user
+  short: Name of the directory the user is a member of.
+  type: keyword
+incident.user.email:
+  description: User email address.
+  flat_name: incident.user.email
+  ignore_above: 1024
+  level: extended
+  name: email
+  order: 3
+  original_fieldset: user
+  short: User email address.
+  type: keyword
+incident.user.full_name:
+  description: User's full name, if available.
+  example: Albert Einstein
+  flat_name: incident.user.full_name
+  ignore_above: 1024
+  level: extended
+  name: full_name
+  order: 2
+  original_fieldset: user
+  short: User's full name, if available.
+  type: keyword
+incident.user.group.id:
+  description: Unique identifier for the group on the system/platform.
+  flat_name: incident.user.group.id
+  ignore_above: 1024
+  level: extended
+  name: id
+  order: 0
+  original_fieldset: user
+  short: Unique identifier for the group on the system/platform.
+  type: keyword
+incident.user.group.name:
+  description: Name of the group.
+  flat_name: incident.user.group.name
+  ignore_above: 1024
+  level: extended
+  name: name
+  order: 1
+  original_fieldset: user
+  short: Name of the group.
+  type: keyword
+incident.user.hash:
+  description: 'Unique user hash to correlate information for a user in anonymized
+    form.
+
+    Useful if `user.id` or `user.name` contain confidential information and cannot
+    be used.'
+  flat_name: incident.user.hash
+  ignore_above: 1024
+  level: extended
+  name: hash
+  order: 4
+  original_fieldset: user
+  short: Unique user hash to correlate information for a user in anonymized form.
+  type: keyword
+incident.user.id:
+  description: One or multiple unique identifiers of the user.
+  flat_name: incident.user.id
+  ignore_above: 1024
+  level: core
+  name: id
+  order: 0
+  original_fieldset: user
+  short: One or multiple unique identifiers of the user.
+  type: keyword
+incident.user.name:
+  description: Short name or login of the user.
+  example: albert
+  flat_name: incident.user.name
+  ignore_above: 1024
+  level: core
+  name: name
+  order: 1
+  original_fieldset: user
+  short: Short name or login of the user.
+  type: keyword
 labels:
   description: 'Custom key/value pairs.
 
