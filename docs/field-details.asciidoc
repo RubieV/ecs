@@ -350,7 +350,7 @@ example: `damn-vulnerable-application > /vulnerability/sql.php > id`
 | attack.payload
 | Payload that the rule is triggered on
 
-type: keyword
+type: text
 
 example: `alert(1)`
 
@@ -372,7 +372,7 @@ example: `["OWASP-A1", "PCI-6.5.10"]`
 | attack.raw_input
 | Context that was seen around the payload
 
-type: keyword
+type: text
 
 example: `Hi! <script>alert(1)</script>`
 

@@ -218,7 +218,7 @@
         "level": "extended", 
         "name": "attack.payload", 
         "required": false, 
-        "type": "keyword"
+        "type": "text"
       }, 
       "attack.policy": {
         "description": "Code prefixed by the source system, for example \"CRS-942100\"", 
@@ -238,7 +238,7 @@
         "level": "extended", 
         "name": "attack.raw_input", 
         "required": false, 
-        "type": "keyword"
+        "type": "text"
       }, 
       "attack.stage": {
         "description": "Stage that the rule is in, from disabled to blocking.", 

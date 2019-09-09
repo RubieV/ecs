@@ -230,12 +230,12 @@ attack.payload:
   description: Payload that the rule is triggered on
   example: alert(1)
   flat_name: attack.payload
-  ignore_above: 1024
   level: extended
   name: payload
+  norms: false
   order: 3
   short: Payload that the rule is triggered on
-  type: keyword
+  type: text
 attack.policy:
   description: Code prefixed by the source system, for example "CRS-942100"
   example: '["OWASP-A1", "PCI-6.5.10"]'
@@ -250,12 +250,12 @@ attack.raw_input:
   description: Context that was seen around the payload
   example: Hi! <script>alert(1)</script>
   flat_name: attack.raw_input
-  ignore_above: 1024
   level: extended
   name: raw_input
+  norms: false
   order: 4
   short: Context that was seen around the payload
-  type: keyword
+  type: text
 attack.stage:
   description: Stage that the rule is in, from disabled to blocking.
   example: '["DISABLED", "TEST", "LEARN", "DETECT", "BLOCK"]'

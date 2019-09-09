@@ -22,9 +22,9 @@ attack.killchain.reason,keyword,extended,"[""A 4xx error code is returned"", ""A
 attack.killchain.risk_score,float,core,,1.1.0-dev
 attack.name,keyword,extended,Host header is a numeric IP address,1.1.0-dev
 attack.path,keyword,extended,damn-vulnerable-application > /vulnerability/sql.php > id,1.1.0-dev
-attack.payload,keyword,extended,alert(1),1.1.0-dev
+attack.payload,text,extended,alert(1),1.1.0-dev
 attack.policy,keyword,extended,"[""OWASP-A1"", ""PCI-6.5.10""]",1.1.0-dev
-attack.raw_input,keyword,extended,Hi! <script>alert(1)</script>,1.1.0-dev
+attack.raw_input,text,extended,Hi! <script>alert(1)</script>,1.1.0-dev
 attack.stage,keyword,extended,"[""DISABLED"", ""TEST"", ""LEARN"", ""DETECT"", ""BLOCK""]",1.1.0-dev
 attack.subcategory,keyword,extended,"[""PROTOCOL_VIOLATION_MISSING_HEADER_ACCEPT"", ""INFORMATIONAL"", ""AUTOMATION_CRAWLER"", ""BEHAVIOR_INSUFFICIENT_AUTHENTICATION""]",1.1.0-dev
 client.address,keyword,extended,,1.1.0-dev

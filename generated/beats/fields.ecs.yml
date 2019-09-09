@@ -216,8 +216,7 @@
       example: damn-vulnerable-application > /vulnerability/sql.php > id
     - name: payload
       level: extended
-      type: keyword
-      ignore_above: 1024
+      type: text
       description: Payload that the rule is triggered on
       example: alert(1)
     - name: policy
@@ -228,8 +227,7 @@
       example: '["OWASP-A1", "PCI-6.5.10"]'
     - name: raw_input
       level: extended
-      type: keyword
-      ignore_above: 1024
+      type: text
       description: Context that was seen around the payload
       example: Hi! <script>alert(1)</script>
     - name: stage

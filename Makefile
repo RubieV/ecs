@@ -99,7 +99,8 @@ reload_docs: generator docs
 schema.json: ve
 	$(PYTHON) scripts/schemas.py && sed -i 's/"attack": {/"attack": {\
         "type": "nested",\
-        "include_in_parent": true,/' generated/elasticsearch/{6,7}/template.json
+        "include_in_parent": true,/' generated/elasticsearch/{6,7}/template.json && \
+        patch generated/elasticsearch/7/template.json scripts/unsupported_features/analyzers.diff
 
 # Download and setup tooling dependencies.
 .PHONY: setup

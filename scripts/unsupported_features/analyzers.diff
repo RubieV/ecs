@@ -1,0 +1,49 @@
+--- generated/elasticsearch/7/template.json.gen	2019-09-09 21:13:02.946985886 +0200
++++ generated/elasticsearch/7/template.json	2019-09-09 21:14:38.945980576 +0200
+@@ -117,7 +117,8 @@
+           }, 
+           "payload": {
+             "norms": false, 
+-            "type": "text"
++            "type": "text",
++            "analyzer": "attack_analyzer"
+           }, 
+           "policy": {
+             "ignore_above": 1024, 
+@@ -125,7 +126,8 @@
+           }, 
+           "raw_input": {
+             "norms": false, 
+-            "type": "text"
++            "type": "text",
++            "analyzer": "attack_analyzer"
+           }, 
+           "stage": {
+             "ignore_above": 1024, 
+@@ -1735,6 +1737,26 @@
+   }, 
+   "order": 1, 
+   "settings": {
++    "analysis": {
++      "analyzer": {
++        "attack_analyzer": {
++          "type": "custom",
++          "tokenizer": "standard",
++          "filter": [
++            "lowercase",
++            {
++              "type": "asciifolding",
++              "preserve_original": true
++            }
++          ],
++          "char_filter": {
++            "type": "pattern_replace",
++            "pattern": "\\d+",
++            "replacement": "0"
++          }
++        }
++      }
++    },
+     "index": {
+       "mapping": {
+         "total_fields": {

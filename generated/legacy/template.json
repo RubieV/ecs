@@ -115,16 +115,16 @@
               "type": "keyword"
             },
             "payload": {
-              "ignore_above": 1024,
-              "type": "keyword"
+              "norms": false,
+              "type": "text"
             },
             "policy": {
               "ignore_above": 1024,
               "type": "keyword"
             },
             "raw_input": {
-              "ignore_above": 1024,
-              "type": "keyword"
+              "norms": false,
+              "type": "text"
             },
             "stage": {
               "ignore_above": 1024,
